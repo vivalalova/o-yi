@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/vivalalova/o-yi/issues"
   },
-  "homepage": "https://github.com/vivalalova/o-yi#readme"
+  "homepage": "https://github.com/vivalalova/o-yi#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "fs-extra": "^0.30.0"
+  }
 }
