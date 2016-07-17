@@ -2,8 +2,16 @@ let beforeAction = require('../beforeAction/beforeAction.js')
 
 let user = require('../controller/user.js')
 
-module.exports = function(app) {
+let route = [
+    ['get', '/user', 'user.find'],
+    ['get', '/user/:id', 'user.findOne'],
+    ['post', '/user', 'user.create'],
+    ['put', '/user/:id', 'user.update'],
+    ['delete', '/user/:id', 'user.delete']
+]
 
+
+module.exports = function(app) {
     //beforeAction
     app.all('*', beforeAction.offSetAndLimit)
     app.all('*', beforeAction.removeInput)
@@ -16,17 +24,14 @@ module.exports = function(app) {
     app.delete('/user/:id', user.delete)
 
     //index.html
-    app.get('/', function(req, res,next) {
+    app.get('/', function(req, res, next) {
         res.render('index', { title: 'express' })
     })
 }
 
 
+function controller_method(string) {
 
-let route = [
-    '/user,user.find',
-    '/user/:id,user.findOne',
-    '/user,user.create',
-    '/user/:id,user.update',
-    '/user/:id,user.delete'
-]
+
+    // return func
+}

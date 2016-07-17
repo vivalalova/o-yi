@@ -10,6 +10,8 @@ let pkg = require('../package.json')
 let version = pkg.version
 
 let cwd = process.cwd()
+var bin = path.join(__dirname, './')
+console.log(bin)
 
 program.version(version)
 
@@ -18,7 +20,7 @@ program
     .description('new a project')
     .action(function(name, options) {
         try {
-            fs.copySync(cwd + '/../templates/app/', name)
+            fs.copySync(bin + '/../templates/app/', name)
             console.log('success!')
             console.log('cd ' + name + ' && npm install')
         } catch (err) {
