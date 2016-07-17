@@ -34,14 +34,8 @@ User.pre('save', function(next) {
 
 User.statics = {
     checkToken: function(token) {
-        let today = new Date()
-        today.setHours(0, 0, 0, 0)
-
         return this.findOne({
-            token: token,
-            last_login: {
-                $gte: today
-            }
+            token: token
         }).exec()
     }
 }

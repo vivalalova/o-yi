@@ -1,5 +1,5 @@
 {
-  "name": "honga",
+  "name": "app",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "bcrypt": "^0.8.7",
     "body-parser": "~1.15.1",
     "co": "^4.6.0",
-    "cookie-parser": "~1.4.3",
+    "cookie-parser": "^1.4.3",
     "debug": "~2.2.0",
     "ejs": "~2.4.1",
     "express": "~4.13.4",

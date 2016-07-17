@@ -22,7 +22,7 @@ module.exports = function(app) {
     app.post('/user', user.create)
     app.put('/user/:id', user.update)
     app.delete('/user/:id', user.delete)
-
+    app.post('/user/login/:account', user.login)
     //index.html
     app.get('/', function(req, res, next) {
         res.render('index', { title: 'express' })

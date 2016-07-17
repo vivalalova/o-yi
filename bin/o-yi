@@ -1,15 +1,13 @@
 #!/usr/bin/env node
 
 let program = require('commander')
-// let mkdirp = require('mkdirp')
 let os = require('os')
 var fs = require('fs-extra')
 
 let path = require('path')
 let readline = require('readline')
 
-let pkg = require('../package.json')
-let version = pkg.version
+let version = require('../package.json').version
 
 let cwd = process.cwd()
 var bin = path.join(__dirname, './')

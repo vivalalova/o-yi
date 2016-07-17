@@ -1,7 +1,7 @@
 let env = require('../config/env.js')
 
 module.exports = {
-    errHandler: function(err, result, res, callback) {
+    err: function(err,res) {
         if (err) {
             if (err.errors) {
                 let message = []
@@ -12,37 +12,36 @@ module.exports = {
                     message: message.join(', ')
                 })
             }
-
             return res.status(400).send({
                 message: err
             })
         }
-
+    },
+    errHandler: function(result, res, callback) {
         if (!result) {
-            return res.status(404).send({
+            res.status(404).send({
                 message: 'not found'
             })
+            return callback(new Error(), undefined)
         } else if (result.result) {
             result = result.result
         }
 
         if (result.ok === 1 && result.n === 0) {
-            return res.status(400).send({
+            res.status(400).send({
                 message: 'not found'
             })
+            return callback(new Error(), undefined)
         }
 
         if (result.ok === 1 && result.nModified === 0) {
-            return res.status(200).send({
+            res.status(200).send({
                 message: 'nothing changed'
             })
+            return callback(new Error(), undefined)
         }
 
-        if (callback) {
-            callback(true)
-        }
-
-        return callback(true)
+        callback(undefined, undefined)
     },
     allow: function(req, res, allowed) {
         if (env.isDevelopment) {
