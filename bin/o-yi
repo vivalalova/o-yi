@@ -13,7 +13,6 @@ let version = pkg.version
 
 let cwd = process.cwd()
 var bin = path.join(__dirname, './')
-console.log(bin)
 
 program.version(version)
 
