@@ -8,7 +8,21 @@ let bcrypt = require('bcrypt')
 let saltRounds = 10
 
 let User = Model.extend({
-
+    account: {
+        type: String,
+        required: true,
+        index: { unique: true }
+    },
+    name: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    token: String,
+    last_login: Date,
 })
 
 User.pre('save', function(next) {
