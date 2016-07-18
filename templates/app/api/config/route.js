@@ -1,14 +1,14 @@
 let beforeAction = require('../beforeAction/beforeAction.js')
 
-let user = require('../controller/user.js')
-
-let route = [
-    ['get', '/user', 'user.find'],
-    ['get', '/user/:id', 'user.findOne'],
-    ['post', '/user', 'user.create'],
-    ['put', '/user/:id', 'user.update'],
-    ['delete', '/user/:id', 'user.delete']
-]
+let route = {
+    user: [
+        ['get', '/', 'find'],
+        ['get', '/:id', 'findOne'],
+        ['post', '/', 'create'],
+        ['put', '/:id', 'update'],
+        ['delete', '/', 'delete'],
+    ],
+}
 
 
 module.exports = function(app) {
@@ -17,12 +17,17 @@ module.exports = function(app) {
     app.all('*', beforeAction.removeInput)
 
     //user
-    app.get('/user', user.find)
-    app.get('/user/:id', user.findOne)
-    app.post('/user', user.create)
-    app.put('/user/:id', user.update)
-    app.delete('/user/:id', user.delete)
-    app.post('/user/login/:account', user.login)
+    let express = require('express')
+    Object.keys(route).forEach(function (key) {
+        let router = express.Router()
+        let array = route[key]
+        let controller = require('../controller/' + key + '.js')
+        array.forEach(function (value) {
+            router[value[0]](value[1], controller[value[2]])
+        })
+        app.use('/' + key, router)
+    })
+
     //index.html
     app.get('/', function(req, res, next) {
         res.render('index', { title: 'express' })
