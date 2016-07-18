@@ -8,6 +8,25 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "brace-style":[
+            "error"
+        ],
+        "camelcase":[
+            "error"
+        ],
+        "require-yield": [
+            "error"
+        ],
+        "no-dupe-class-members": [
+            "error"
+        ],
+        "no-duplicate-imports": [
+            "error"
+        ],
+        "no-var": [
+            "error"
+        ],
+        "prefer-const": ["error"],
         "indent": [
             "error",
             4

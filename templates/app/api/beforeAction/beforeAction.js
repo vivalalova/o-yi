@@ -1,5 +1,5 @@
-let helper = require('../helper/helper.js')
-let env = require('../config/env.js')
+const helper = require('../helper/helper.js')
+const env = require('../config/env.js')
 
 const { wrap: async } = require('co')
 
