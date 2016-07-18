@@ -2,9 +2,7 @@ const express = require('express')
 const path = require('path')
 const favicon = require('serve-favicon')
 const logger = require('morgan')
-const cookieParser = require('cookie-parser')
 const session = require('./api/config/session.js')
-const bodyParser = require('body-parser')
 const env = require('./api/config/env.js')
 const app = express()
 
@@ -18,14 +16,13 @@ if (env.isDevelopment === true) {
     app.use(logger('dev'))
 }
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
-
 app.use(session)
 
-require('./api/config/route.js')(app)
+const middleware =require('./api/config/middleware.js')
+middleware(app)
+const route = require('./lib/route.js')
+route(app)
 
 
 // catch 404 and forward to error handler
