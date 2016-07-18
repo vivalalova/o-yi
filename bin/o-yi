@@ -29,6 +29,7 @@ program
 
 program
     .command('generate [api]')
+    .alias('g')
     .description('new a API')
     .action(function(api, options) {
         try {
