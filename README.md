@@ -13,17 +13,17 @@ npm install -g o-yi
 Create project
 
 ```bash
-    o-yi new {project name}
+o-yi new {project name}
 ```
 
 Enter {project name} folder
 
 ```bash
-    cd {project name}
+cd {project name}
 ```
 
 Generate a CRUD API
 
 ```bash
-    o-yi generate {api name}
+o-yi generate {api name}
 ```
