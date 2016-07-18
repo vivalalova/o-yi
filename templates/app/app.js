@@ -1,12 +1,12 @@
-let express = require('express')
-let path = require('path')
-let favicon = require('serve-favicon')
-let logger = require('morgan')
-let cookieParser = require('cookie-parser')
-let session = require('./api/config/session.js')
-let bodyParser = require('body-parser')
-let env = require('./api/config/env.js')
-let app = express()
+const express = require('express')
+const path = require('path')
+const favicon = require('serve-favicon')
+const logger = require('morgan')
+const cookieParser = require('cookie-parser')
+const session = require('./api/config/session.js')
+const bodyParser = require('body-parser')
+const env = require('./api/config/env.js')
+const app = express()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'api/views'))
@@ -30,7 +30,7 @@ require('./api/config/route.js')(app)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    let err = new Error('Not Found')
+    const err = new Error('Not Found')
     err.status = 404
     next(err)
 })

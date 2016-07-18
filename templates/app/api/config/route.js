@@ -1,4 +1,4 @@
-let beforeAction = require('../beforeAction/beforeAction.js')
+const beforeAction = require('../beforeAction/beforeAction.js')
 
 const route = {
     user: [
@@ -31,11 +31,4 @@ module.exports = function(app) {
     app.get('/', function(req, res, next) {
         res.render('index', { title: 'express' })
     })
-}
-
-
-function controller_method(string) {
-
-
-    // return func
 }
