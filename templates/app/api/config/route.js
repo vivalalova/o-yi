@@ -1,6 +1,6 @@
 let beforeAction = require('../beforeAction/beforeAction.js')
 
-let route = {
+const route = {
     user: [
         ['get', '/', 'find'],
         ['get', '/:id', 'findOne'],
@@ -16,13 +16,12 @@ module.exports = function(app) {
     app.all('*', beforeAction.offSetAndLimit)
     app.all('*', beforeAction.removeInput)
 
-    //user
-    let express = require('express')
-    Object.keys(route).forEach(function (key) {
-        let router = express.Router()
-        let array = route[key]
-        let controller = require('../controller/' + key + '.js')
-        array.forEach(function (value) {
+    const express = require('express')
+    Object.keys(route).forEach(function(key) {
+        const router = express.Router()
+        const array = route[key]
+        const controller = require('../controller/' + key + '.js')
+        array.forEach(function(value) {
             router[value[0]](value[1], controller[value[2]])
         })
         app.use('/' + key, router)
