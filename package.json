@@ -17,6 +17,9 @@
     "express"
   ],
   "author": "vivalalova",
+  "contributors":[
+    {"name":"karolass"}
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vivalalova/o-yi/issues"
