@@ -18,7 +18,7 @@ module.exports = {
         "no-this-before-super": "error",
         "require-yield": "error",
         "yield-star-spacing": ["error", "before"],
-        "curly": ["error", "multi-or-nest"],
+        // "curly": ["error", "multi-or-nest"],
         "object-curly-spacing": ["error", "always", {
             "objectsInObjects": false,
             "arraysInObjects": false
