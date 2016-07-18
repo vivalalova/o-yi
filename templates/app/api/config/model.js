@@ -1,7 +1,7 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+let mongoose = require('mongoose')
+let Schema = mongoose.Schema
 
-const Model = new Schema({
+let Model = new Schema({
     createdAt: {
         type: Date,
         default: Date.now

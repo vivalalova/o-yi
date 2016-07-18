@@ -1,8 +1,8 @@
-const beforeAction = require('../beforeAction/beforeAction.js')
+let beforeAction = require('../beforeAction/beforeAction.js')
 
-const user = require('../controller/user.js')
+let user = require('../controller/user.js')
 
-const route = [
+let route = [
     ['get', '/user', 'user.find'],
     ['get', '/user/:id', 'user.findOne'],
     ['post', '/user', 'user.create'],
@@ -27,4 +27,11 @@ module.exports = function(app) {
     app.get('/', function(req, res, next) {
         res.render('index', { title: 'express' })
     })
+}
+
+
+function controller_method(string) {
+
+
+    // return func
 }

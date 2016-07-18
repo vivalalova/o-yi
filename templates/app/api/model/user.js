@@ -1,13 +1,13 @@
-const Model = require('../config/model.js')
+let Model = require('../config/model.js')
 
-const mongoose = require('mongoose')
-const extend = require('mongoose-schema-extend')
-const Schema = mongoose.Schema
+let mongoose = require('mongoose')
+let extend = require('mongoose-schema-extend')
+let Schema = mongoose.Schema
 
-const bcrypt = require('bcrypt')
-const saltRounds = 10
+let bcrypt = require('bcrypt')
+let saltRounds = 10
 
-const User = Model.extend({
+let User = Model.extend({
     account: {
         type: String,
         required: true,
@@ -22,6 +22,7 @@ const User = Model.extend({
         required: true
     },
     token: String,
+    last_login: Date,
 })
 
 User.pre('save', function(next) {

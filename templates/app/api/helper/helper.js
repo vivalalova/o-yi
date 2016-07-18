@@ -1,11 +1,11 @@
-const env = require('../config/env.js')
+let env = require('../config/env.js')
 
 module.exports = {
     err: function(err,res) {
         if (err) {
             if (err.errors) {
-                const message = []
-                for (const key in err.errors) {
+                let message = []
+                for (let key in err.errors) {
                     message.push(err.errors[key].message)
                 }
                 return res.status(400).send({
