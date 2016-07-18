@@ -25,7 +25,6 @@ module.exports = {
         }],
         "no-extra-parens": "error",
         "no-whitespace-before-property": "error",
-        "no-whitespace-before-property": "error",
         "no-unneeded-ternary": "error",
         "no-trailing-spaces": "error",
         "no-spaced-func": "error",
