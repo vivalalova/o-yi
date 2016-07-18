@@ -19,8 +19,10 @@ if (env.isDevelopment === true) {
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(session)
 
-require('./api/config/middleware.js')(app)
-require('./api/config/route.js')(app)
+const middleware =require('./api/config/middleware.js')
+middleware(app)
+const route = require('./lib/route.js')
+route(app)
 
 
 // catch 404 and forward to error handler
