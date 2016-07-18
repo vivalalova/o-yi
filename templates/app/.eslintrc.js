@@ -18,7 +18,7 @@ module.exports = {
         "no-this-before-super": "error",
         "require-yield": "error",
         "yield-star-spacing": ["error", "before"],
-        "curly": "error",
+        "curly": ["error", "multi-or-nest"],
         "object-curly-spacing": ["error", "always", {
             "objectsInObjects": false,
             "arraysInObjects": false
@@ -56,7 +56,7 @@ module.exports = {
             "error",
             "never"
         ],
-        "no-unused-vars": "off",
+        "no-unused-vars": "warn",
         "no-console": 0
     },
     "plugins": [
