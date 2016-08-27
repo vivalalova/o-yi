@@ -51,7 +51,7 @@ program
             })
 
             console.log(`generate API ${api} success!`)
-            console.log("%cModyfyapi/config/route.js to make it works", "color:yellow")
+            console.log('\x1b[33m', 'Modify api/config/route.js to make it works' ,'\x1b[0m');
         } catch (err) {
             console.error(err)
         }
