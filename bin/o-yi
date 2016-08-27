@@ -36,16 +36,22 @@ program
             let temp = api.toLowerCase()
             let Name = temp[0].toUpperCase() + temp.slice(1)
             let name = temp[0].toLowerCase() + temp.slice(1)
+
+            //create model
             fs.readFile(bin + '/../templates/model.js', 'utf8', function (err, data) {
                 let result = data.replace(/{Name}/g, Name)
                 fs.outputFileSync(cwd + '/api/model/' + name + '.js', result)
             })
+
+            //create controller
             fs.readFile(bin + '/../templates/controller.js', 'utf8', function (err, data) {
                 let result = data.replace(/{Name}/g, Name)
                 result = result.replace(/{name}/g, name)
                 fs.outputFileSync(cwd + '/api/controller/' + name + '.js', result)
             })
+
             console.log(`generate API ${api} success!`)
+            console.log("%cModyfyapi/config/route.js to make it works", "color:yellow")
         } catch (err) {
             console.error(err)
         }
