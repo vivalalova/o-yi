@@ -1,4 +1,4 @@
-const db = process.env.DB
+const db = process.env.DB || process.env.MONGODB_URI
 const development = process.env.DEVELOPMENT
 const port =  process.env.PORT
 
