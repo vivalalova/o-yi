@@ -2,6 +2,15 @@
 
 A express generator
 
+
+##### Master
+
+[![Build Status](https://travis-ci.org/vivalalova/o-yi.svg?branch=master)](https://travis-ci.org/vivalalova/o-yi/)
+
+##### Develop
+[![Build Status](https://travis-ci.org/vivalalova/o-yi.svg?branch=develop)](https://travis-ci.org/vivalalova/o-yi/)
+
+
 ## Installation
 
 ```bash
