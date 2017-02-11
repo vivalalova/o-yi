@@ -1,32 +1,32 @@
 {
-  "name": "o-yi",
-  "version": "0.1.13",
-  "description": "express generator",
-  "main": "index.js",
-  "scripts": {
-    "test": "ls"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vivalalova/o-yi.git"
-  },
-  "bin": {
-    "o-yi": "./bin/o-yi"
-  },
-  "keywords": [
-    "express"
-  ],
-  "author": "vivalalova",
-  "contributors":[
-    {"name":"karolass"}
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vivalalova/o-yi/issues"
-  },
-  "homepage": "https://github.com/vivalalova/o-yi#readme",
-  "dependencies": {
-    "commander": "^2.9.0",
-    "fs-extra": "^0.30.0"
-  }
+    "name": "o-yi",
+    "version": "0.1.14",
+    "description": "express generator",
+    "main": "index.js",
+    "scripts": {
+        "test": "ls"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vivalalova/o-yi.git"
+    },
+    "bin": {
+        "o-yi": "./bin/o-yi"
+    },
+    "keywords": [
+        "express"
+    ],
+    "author": "vivalalova",
+    "contributors": [
+        { "name": "karolass" }
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vivalalova/o-yi/issues"
+    },
+    "homepage": "https://github.com/vivalalova/o-yi#readme",
+    "dependencies": {
+        "commander": "^2.9.0",
+        "fs-extra": "^0.30.0"
+    }
 }
