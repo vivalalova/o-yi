@@ -1,11 +1,11 @@
-
+const user = require('../controller/user.js')
 
 module.exports = [{
     user: [
-        ['get', '/', 'find'],
-        ['get', '/:id', 'findOne'],
-        ['post', '/', 'create'],
-        ['put', '/:id', 'update'],
-        ['delete', '/', 'delete'],
+        ['get', '/', user.find],
+        ['get', '/:id', user.findOne],
+        ['post', '/', user.create],
+        ['put', '/:id', user.update],
+        ['delete', '/', user.delete],
     ]
 }]
