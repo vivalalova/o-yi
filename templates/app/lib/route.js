@@ -12,9 +12,17 @@ function useController(route, app) {
     Object.keys(route).forEach(function(key) {
         const router = express.Router()
         const array = route[key]
-        const controller = require('../api/controller/' + key + '.js')
         array.forEach(function(value) {
-            router[value[0]](value[1], controller[value[2]])
+            if (value.length > 3) {
+                for (let i = 3; i < value.length; i++) {
+                    if (typeof value[i] === 'function') {
+                        router[value[0]](value[1], value[i])
+                    }
+                }
+            }
+            if (typeof value[2] === 'function') {
+                router[value[0]](value[1], value[2])
+            }
         })
         app.use('/' + key, router)
     })
