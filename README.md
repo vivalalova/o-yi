@@ -17,7 +17,7 @@ A express generator
 npm install -g o-yi
 ```
 
-## Usage
+## GET STARTED
 
 #### Create project
 
@@ -45,6 +45,22 @@ const user = require('../controller/user.js')
 module.exports = [{
     user: [
         ['get', '/', user.find],
+        ['get', '/:id', user.findOne],
+        ['post', '/', user.create],
+        ['put', '/:id', user.update],
+        ['delete', '/', user.delete],
+    ]
+}]
+```
+
+### Before Action
+
+```javascript
+module.exports = [{
+    user: [
+        //verify before api
+        ['get', '/', user.findOne, jwt.verify],
+        //API handler
         ['get', '/:id', user.findOne],
         ['post', '/', user.create],
         ['put', '/:id', user.update],
