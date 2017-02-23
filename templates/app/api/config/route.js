@@ -6,6 +6,6 @@ module.exports = [{
         ['get', '/:id', user.findOne],
         ['post', '/', user.create],
         ['put', '/:id', user.update],
-        ['delete', '/', user.delete],
+        ['delete', '/:id', user.delete],
     ]
 }]
