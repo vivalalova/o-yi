@@ -11,10 +11,9 @@ A express generator
 
 ## Notice
 
-Version 0.2.0+ for node 7.6+.
+1. o-yi 0.2.0+ for node 7.6+.
 
-* [Here](https://github.com/vivalalova/o-yi/tree/node4) for node 4 +
-    * vertion 0.1.x
+2. [o-yi 0.1.x](https://github.com/vivalalova/o-yi/tree/node4) for node 4 +
 
 ## Installation
 
