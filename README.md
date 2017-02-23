@@ -2,7 +2,6 @@
 
 A express generator
 
-
 ##### Master
 
 [![Build Status](https://travis-ci.org/vivalalova/o-yi.svg?branch=master)](https://travis-ci.org/vivalalova/o-yi/)
@@ -10,6 +9,12 @@ A express generator
 ##### Develop
 [![Build Status](https://travis-ci.org/vivalalova/o-yi.svg?branch=develop)](https://travis-ci.org/vivalalova/o-yi/)
 
+## Notice
+
+Version 0.2.0+ for node 7.6+.
+
+* [Here](https://github.com/vivalalova/o-yi/tree/node4) for node 4 +
+    * vertion 0.1.x
 
 ## Installation
 
