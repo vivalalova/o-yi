@@ -5,7 +5,7 @@ module.exports = {
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-        "sourceType": "module"
+        "ecmaVersion": 2017
     },
     "rules": {
         "space-before-blocks": "error",
